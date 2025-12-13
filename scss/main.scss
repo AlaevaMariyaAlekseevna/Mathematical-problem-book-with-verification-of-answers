@@ -1,0 +1,21 @@
+// Импорт переменных
+@import 'variables';
+
+// Импорт компонентов
+@import 'header';
+@import 'footer';
+
+// Базовые стили
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-main;
+    background: $gradient-main;
+    min-height: 100vh;
+    color: $primary-color;
+    line-height: 1.6;
+}

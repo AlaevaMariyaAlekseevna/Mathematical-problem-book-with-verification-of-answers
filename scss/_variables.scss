@@ -1,0 +1,46 @@
+// scss/_variables.scss
+// Основные цвета
+$primary-color: #333;
+$secondary-color: #2c3e50;
+$text-light: #7f8c8d;
+$text-gray: #6c757d;
+
+// Светлые цвета
+$light-color: #f8f9fa;
+$light-blue: #f0f8ff;
+$light-purple: #f0e8ff;
+$light-cyan: #e8f4fc;
+
+// Градиенты
+$gradient-main: linear-gradient(135deg, #86D2F4, #8780FF);
+$gradient-success: linear-gradient(135deg, #28a745, #20c997);
+$gradient-info: linear-gradient(135deg, #86D2F4, #5bc0de);
+$gradient-purple: linear-gradient(135deg, #8780FF, #6f42c1);
+
+// Цвета элементов
+$border-color: #eaeaea;
+$border-light: #e9ecef;
+$border-blue: #86D2F4;
+$border-purple: #8780FF;
+
+// Фоновые цвета
+$bg-success: #d4edda;
+$bg-error: #f8d7da;
+$bg-blue-light: rgba(134, 210, 244, 0.1);
+
+// Текстовые цвета для состояний
+$text-success: #155724;
+$text-error: #721c24;
+
+// Тени
+$shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.1);
+$shadow-blue: 0 3px 10px rgba(135, 128, 255, 0.3);
+
+// Шрифты
+$font-main: 'Roboto', sans-serif;
+$font-heading: 'KoPub Batang', serif;
+
+// Размеры
+$container-width: 1200px;
+$border-radius: 20px;

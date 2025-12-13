@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОГЭ - Обучайка</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/oge.css">
+
+<body>
+    <div id="header-container"></div>
+    <!-- Основной контент -->
+    <div class="container">
+        <div class="white-content-wrapper">
+            <div class="page-header">
+                <h1>Тренировочные работы ОГЭ</h1>
+                <p>10 вариантов • Полные решения и проверка ответов</p>
+            </div>
+            <!-- Фильтр по работам -->
+            <div class="grade-filter" id="work-filter">
+                <!-- Кнопки будут добавлены через JavaScript -->
+            </div>
+            <!-- Информация о выбранной работе -->
+            <div class="grade-info algebra" id="work-info">
+                <h3>Вариант 1</h3>
+                <p>25 заданий • Время выполнения: 235 минут</p>
+            </div>
+            <div class="stats algebra">
+                Всего задач: <span id="total-count">250</span>
+                Решено: <span id="solved-count">0</span>
+                Прогресс: <span id="progress-percent">0%</span>
+            </div>
+
+            <!-- Секция для отображения всех задач выбранного варианта -->
+            <div id="work-container">
+                <!-- Задачи будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </div>
+    <!-- Подвал -->
+<div id="footer-content"></div>
+    <script src="js/template-loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/oge.js"></script>
+</body>
+
+</html>

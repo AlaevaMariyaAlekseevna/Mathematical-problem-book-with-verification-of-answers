@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгебра - Обучайка</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Навигационная панель -->
+    <div id="header-container"></div>
+    <main>
+        <div class="container">
+            <!-- Обертка с белым фоном -->
+            <div class="white-content-wrapper">
+                <div class="page-header">
+                    <h1>Алгебра</h1>
+                    <p>Задачи по классам. Выберите класс для просмотра всех задач.</p>
+                </div>
+
+                <!-- Фильтр по классам -->
+                <div class="grade-filter">
+                    <button class="grade-btn active" data-grade="5">5 класс</button>
+                    <button class="grade-btn" data-grade="6">6 класс</button>
+                    <button class="grade-btn" data-grade="7">7 класс</button>
+                    <button class="grade-btn" data-grade="8">8 класс</button>
+                    <button class="grade-btn" data-grade="9">9 класс</button>
+                </div>
+
+                <!-- Информация о выбранном классе -->
+                <div class="grade-info algebra" id="grade-info">
+                    <h3>Алгебра 5 класс</h3>
+                    <p>Логические задачи: высказывания, отрицание, конъюнкция, дизъюнкция</p>
+                </div>
+
+                <!-- Статистика -->
+                <div class="stats algebra">
+                    Всего задач: <span id="total-problems">0</span>
+                    Решено: <span id="solved-count">0</span>
+                    Прогресс: <span id="progress-percent">0%</span>
+                </div>
+                <!-- Где-то в вашем HTML должен быть такой блок: -->
+                <div id="certificate-section" class="certificate-section" style="display: none;">
+                    Поздравляем! Вы полностью освоили геометрию!</h3>
+                    <p>Вы решили все задачи и достигли 100% прогресса. Получите сертификат об успешном завершении курса.
+                    </p>
+                    <button id="get-certificate" class="btn btn-certificate">
+                        Получить сертификат
+                    </button>
+                </div>
+                <!-- Секция для отображения всех задач выбранного класса -->
+                <div class="grade-section active" id="grade-5">
+                    <div class="problems-container" id="grade-5-problems">
+                        <!-- Задачи будут добавлены через JavaScript -->
+                    </div>
+                </div>
+
+                <div class="grade-section" id="grade-6">
+                    <div class="problems-container" id="grade-6-problems">
+                        <!-- Задачи будут добавлены через JavaScript -->
+                    </div>
+                </div>
+
+                <div class="grade-section" id="grade-7">
+                    <div class="problems-container" id="grade-7-problems">
+                        <!-- Задачи будут добавлены через JavaScript -->
+                    </div>
+                </div>
+
+                <div class="grade-section" id="grade-8">
+                    <div class="problems-container" id="grade-8-problems">
+                        <!-- Задачи будут добавлены через JavaScript -->
+                    </div>
+                </div>
+
+                <div class="grade-section" id="grade-9">
+                    <div class="problems-container" id="grade-9-problems">
+                        <!-- Задачи будут добавлены через JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Подвал -->
+<div id="footer-content"></div>
+    <!-- Подключаем загрузчик шаблонов -->
+    <script src="js/template-loader.js"></script>
+    <script src="js/algebra.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,702 @@
+/* oge.css - стили для страницы ОГЭ с такими же формами как в алгебре */
+
+/* Основные стили для ОГЭ страницы */
+.oge-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #86D2F4, #8780FF);
+}
+
+/* Белая обертка для контента - такая же как в алгебре */
+.oge-content-wrapper {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Заголовок страницы */
+.oge-page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.oge-page-header h1 {
+    font-family: 'KoPub Batang', serif;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.oge-page-header p {
+    color: #6c757d;
+    font-size: 1.2em;
+}
+
+/* Фильтр вариантов */
+.oge-filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.oge-filter-btn {
+    min-width: 130px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    color: #6c757d;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.oge-filter-btn:hover {
+    border-color: #86D2F4;
+    color: #86D2F4;
+    transform: translateY(-2px);
+}
+
+.oge-filter-btn.active {
+    background: linear-gradient(135deg, #86D2F4, #8780FF);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 3px 10px rgba(135, 128, 255, 0.3);
+}
+
+/* Информация о варианте */
+.oge-work-info {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e8f4fc, #f0e8ff);
+    border-radius: 20px;
+    border-left: 4px solid #8780FF;
+}
+
+.oge-work-info h3 {
+    color: #2c3e50;
+    font-family: 'KoPub Batang', serif;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.oge-work-info p {
+    color: #6c757d;
+    font-size: 1.1em;
+}
+
+/* Статистика - такая же как в алгебре */
+.oge-stats {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.oge-stats span {
+    font-weight: bold;
+    color: #8780FF;
+    font-size: 1.1em;
+    margin: 0 10px;
+}
+
+/* Кнопка сброса прогресса */
+.oge-reset-btn {
+    background: linear-gradient(135deg, #ffc107, #ff9800);
+    color: #333 !important;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 200px;
+}
+
+.oge-reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+}
+
+/* Контейнер для задач */
+.oge-tasks-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Карточка задачи - полная ширина как в алгебре */
+.oge-task-card {
+    position: relative;
+    background: white;
+    border-left: 4px solid #86D2F4;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.oge-task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Заголовок задачи */
+.oge-task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.oge-task-topic {
+    background: linear-gradient(135deg, #86D2F4, #8780FF);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.oge-task-number {
+    background: #f8f9fa;
+    color: #2c3e50;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #e9ecef;
+    min-width: 80px;
+    text-align: center;
+}
+
+.oge-solved-badge {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+/* Вопрос - полная ширина */
+.oge-task-question {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 25px 0;
+    color: #2c3e50;
+    width: 100%;
+}
+
+.oge-task-question img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #ddd;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.oge-task-question img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Блок для ввода ответа - полная ширина как в алгебре */
+.oge-answer-container {
+    background: #f0f8ff;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px 0;
+    border: 2px solid #e9ecef;
+    width: 100%;
+}
+
+.oge-answer-section {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.oge-answer-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 14px 20px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    height: 50px;
+}
+
+.oge-answer-input:focus {
+    border-color: #86D2F4;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(134, 210, 244, 0.2);
+}
+
+/* Кнопка проверки */
+.oge-check-btn {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    height: 50px;
+    min-width: 160px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.oge-check-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Кнопки действий */
+.oge-task-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.oge-hint-btn,
+.oge-solution-btn,
+.oge-answer-btn {
+    flex: 1;
+    min-width: 180px;
+    padding: 13px 20px;
+    font-size: 15px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.oge-hint-btn {
+    background: linear-gradient(135deg, #8780FF, #6f42c1);
+}
+
+.oge-solution-btn {
+    background: linear-gradient(135deg, #86D2F4, #5bc0de);
+}
+
+.oge-answer-btn {
+    background: linear-gradient(135deg, #86D2F4, #8780FF);
+}
+
+.oge-hint-btn:hover,
+.oge-solution-btn:hover,
+.oge-answer-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Фидбэк - полная ширина */
+.oge-feedback {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    animation: ogeFadeIn 0.3s ease;
+    width: 100%;
+}
+
+.oge-feedback.correct {
+    background: rgba(40, 167, 69, 0.1);
+    border-left: 4px solid #28a745;
+    color: #155724;
+}
+
+.oge-feedback.incorrect {
+    background: rgba(220, 53, 69, 0.1);
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+}
+
+.oge-feedback.info {
+    background: rgba(23, 162, 184, 0.1);
+    border-left: 4px solid #17a2b8;
+    color: #0c5460;
+}
+
+/* Решение - полная ширина */
+.oge-solution {
+    background: #e8f4fc;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 25px;
+    border-left: 4px solid #86D2F4;
+    width: 100%;
+    display: none;
+}
+
+.oge-solution.show {
+    display: block;
+    animation: ogeFadeIn 0.5s ease;
+}
+
+.oge-solution h4 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'KoPub Batang', serif;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Модальное окно для подсказок */
+.oge-hint-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: ogeFadeIn 0.3s ease;
+}
+
+.oge-hint-content {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    animation: ogeScaleIn 0.3s ease;
+    z-index: 2001;
+}
+
+.oge-hint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.oge-hint-header h4 {
+    color: #2c3e50;
+    margin: 0;
+    font-family: 'KoPub Batang', serif;
+}
+
+.oge-close-hint {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.oge-close-hint:hover {
+    color: #dc3545;
+}
+
+.oge-hint-body {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.oge-hint-icon {
+    font-size: 3.5rem;
+    color: #8780FF;
+    margin-bottom: 25px;
+}
+
+.oge-hint-text {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.oge-hint-footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Поздравления */
+.oge-congratulations {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #86D2F4, #8780FF);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: ogeSlideInRight 0.5s ease;
+    max-width: 350px;
+}
+
+.oge-congrats-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.oge-congrats-icon {
+    font-size: 2.5rem;
+}
+
+/* Анимации */
+@keyframes ogeFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ogeScaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes ogeSlideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ogePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(134, 210, 244, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(134, 210, 244, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(134, 210, 244, 0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .oge-content-wrapper {
+        padding: 30px;
+        margin: 15px;
+    }
+    
+    .oge-task-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .oge-content-wrapper {
+        padding: 25px 20px;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    .oge-page-header h1 {
+        font-size: 2em;
+    }
+    
+    .oge-task-card {
+        padding: 20px;
+    }
+    
+    .oge-task-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .oge-task-number,
+    .oge-task-topic {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .oge-solved-badge {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    
+    .oge-answer-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .oge-answer-input {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 0;
+    }
+    
+    .oge-check-btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .oge-task-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .oge-hint-btn,
+    .oge-solution-btn,
+    .oge-answer-btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .oge-task-question {
+        font-size: 1.1rem;
+    }
+    
+    .oge-solution {
+        padding: 20px;
+    }
+    
+    .oge-stats {
+        gap: 20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .oge-content-wrapper {
+        padding: 20px 15px;
+        margin: 5px;
+    }
+    
+    .oge-task-card {
+        padding: 15px;
+    }
+    
+    .oge-filter-btn {
+        min-width: 100px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .oge-answer-input {
+        padding: 12px 15px;
+        font-size: 15px;
+        height: 46px;
+    }
+    
+    .oge-check-btn {
+        padding: 12px 20px;
+        font-size: 15px;
+        height: 46px;
+    }
+    
+    .oge-hint-btn,
+    .oge-solution-btn,
+    .oge-answer-btn {
+        padding: 12px 15px;
+        font-size: 14px;
+        height: 44px;
+    }
+    
+    .oge-congratulations {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        max-width: none;
+    }
+}
+@keyframes ogeFadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(20px); }
+        }
+        
+        .oge-alert {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .fade-out {
+            animation: ogeFadeOut 0.5s ease forwards;
+        }
+        
+        /* Стили для алертов */
+        .oge-alert-info { background: #17a2b8; }
+        .oge-alert-success { background: #28a745; }
+        .oge-alert-warning { background: #ffc107; }
+        .oge-alert-error { background: #dc3545; }

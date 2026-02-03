@@ -4,65 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обучайка - математический задачник</title>
+    <meta name="description" content="Обучайка - образовательная платформа для школьников и студентов. Интерактивные задания по математике, подготовка к ОГЭ.">
+    <title>Обучайка - математический задачник для школьников</title>
+    
+    <!-- Предзагрузка критичных ресурсов -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
+    <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106605326', 'ym');
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
 
-    ym(106605326, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/106605326" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+    ym(106605326, 'init', {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106605326" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
 </head>
 
 <body>
-    <div id="header-container"></div>
-<div class="cookie-notification cookie-notification_hidden_yes">
+    <!-- Шапка сайта -->
+    <div id="header-container" aria-label="Основная навигация сайта"></div>
+    
+    <!-- Уведомление о cookies -->
+    <div class="cookie-notification cookie-notification_hidden_yes" role="dialog" aria-label="Уведомление о сборе статистики">
         <div class="cookie-notification__header">Предупреждение о сборе статистики</div>
         <div class="cookie-notification__body">
-       <p>Этот сайт собирает статистику посещения и данные посетителей.</p>
-       <p>[Ссылка на Пользовательское соглашение вашего сайта или на Политику конфиденциальности вашего сайта]</p>
+            <p>Этот сайт собирает статистику посещения и данные посетителей.</p>
+            <p>[Ссылка на Пользовательское соглашение вашего сайта или на Политику конфиденциальности вашего сайта]</p>
         </div>
         <div class="cookie-notification__buttons">
-            <button class="cookie-notification__button" id="yes">Я согласен</button>
+            <button class="cookie-notification__button" id="yes" aria-label="Согласиться с использованием cookies">Я согласен</button>
         </div>
     </div>
-    <main class="sections-wrapper">
-        <section class="hero-section">
 
-            <h1 class="section-title">Добро пожаловать в Обучайку!</h1>
-            <p class="hero-subtitle">
-                Образовательная платформа для школьников и студентов.
-                Интерактивные задания, понятные объяснения и подготовка к экзаменам.
-                Учиться стало интересно и эффективно!
-            </p>
-            <a href="#features" class="hero-cta">Начать обучение</a>
+    <main class="sections-wrapper">
+        <!-- Герой-секция -->
+        <section class="hero-section" aria-labelledby="main-title">
+            <div class="container">
+                <h1 class="section-title" id="main-title">Добро пожаловать в Обучайку!</h1>
+                <p class="hero-subtitle">
+                    Образовательная платформа для школьников и студентов.
+                    Интерактивные задания, понятные объяснения и подготовка к экзаменам.
+                    Учиться стало интересно и эффективно!
+                </p>
+                <a href="#features" class="hero-cta" aria-label="Начать обучение на платформе">Начать обучение</a>
             </div>
         </section>
 
         <!-- Особенности платформы -->
-        <section class="features-section">
+        <section class="features-section" aria-labelledby="features-title">
             <div class="container">
-                <h2 class="section-title">Почему выбирают нас?</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                <h2 class="section-title" id="features-title">Почему выбирают нас?</h2>
+                <div class="features-grid" role="list">
+                    <div class="feature-card" role="listitem">
+                        <div class="feature-icon" aria-hidden="true">
                             <i class="bi bi-book"></i>
                         </div>
                         <h3 class="feature-title">Интерактивные задания</h3>
@@ -72,8 +87,8 @@
                         </p>
                     </div>
 
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <div class="feature-card" role="listitem">
+                        <div class="feature-icon" aria-hidden="true">
                             <i class="bi bi-person"></i>
                         </div>
                         <h3 class="feature-title">Опытные педагоги</h3>
@@ -83,61 +98,66 @@
                         </p>
                     </div>
                 </div>
-        </section>
-
-        <section id="features" class="subjects-section">
-            <h2 class="section-title">Направления обучения</h2>
-            <div class="subjects-grid">
-                <a href="algebra.html" class="subject-card">
-                    <div class="subject-icon">
-                        <i class="bi bi-calculator"></i>
-                    </div>
-                    <h3 class="subject-title">Алгебра</h3>
-                    <p class="subject-description">
-                        От простых уравнений до сложных функций.
-                        Понятные объяснения и практические задачи для всех классов.
-                    </p>
-                </a>
-
-                <a href="geometry.html" class="subject-card">
-                    <div class="subject-icon">
-                        <i class="bi bi-triangle"></i>
-                    </div>
-                    <h3 class="subject-title">Геометрия</h3>
-                    <p class="subject-description">
-                        Теоремы, задачи на построение, пространственное мышление.
-                        Интерактивные чертежи и визуализация.
-                    </p>
-                </a>
-
-                <a href="oge.html" class="subject-card">
-                    <div class="subject-icon">
-                        <i class="bi bi-file-text"></i>
-                    </div>
-                    <h3 class="subject-title">ОГЭ</h3>
-                    <p class="subject-description">
-                        Полная подготовка к Основному Государственному Экзамену.
-                        Тесты, разбор заданий, рекомендации экспертов.
-                    </p>
-                </a>
             </div>
         </section>
 
-        <section class="reference-section">
+        <!-- Направления обучения -->
+        <section id="features" class="subjects-section" aria-labelledby="subjects-title">
             <div class="container">
-                <h2 class="section-title">Справочные материалы</h2>
+                <h2 class="section-title" id="subjects-title">Направления обучения</h2>
+                <div class="subjects-grid" role="list">
+                    <a href="algebra.html" class="subject-card" role="listitem" aria-label="Перейти к разделу Алгебра">
+                        <div class="subject-icon" aria-hidden="true">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+                        <h3 class="subject-title">Алгебра</h3>
+                        <p class="subject-description">
+                            От простых уравнений до сложных функций.
+                            Понятные объяснения и практические задачи для всех классов.
+                        </p>
+                    </a>
 
-                <div class="reference-grid">
+                    <a href="geometry.html" class="subject-card" role="listitem" aria-label="Перейти к разделу Геометрия">
+                        <div class="subject-icon" aria-hidden="true">
+                            <i class="bi bi-triangle"></i>
+                        </div>
+                        <h3 class="subject-title">Геометрия</h3>
+                        <p class="subject-description">
+                            Теоремы, задачи на построение, пространственное мышление.
+                            Интерактивные чертежи и визуализация.
+                        </p>
+                    </a>
+
+                    <a href="oge.html" class="subject-card" role="listitem" aria-label="Перейти к разделу подготовки к ОГЭ">
+                        <div class="subject-icon" aria-hidden="true">
+                            <i class="bi bi-file-text"></i>
+                        </div>
+                        <h3 class="subject-title">ОГЭ</h3>
+                        <p class="subject-description">
+                            Полная подготовка к Основному Государственному Экзамену.
+                            Тесты, разбор заданий, рекомендации экспертов.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Справочные материалы -->
+        <section class="reference-section" aria-labelledby="reference-title">
+            <div class="container">
+                <h2 class="section-title" id="reference-title">Справочные материалы</h2>
+
+                <div class="reference-grid" role="list">
                     <!-- Алгебра -->
-                    <div class="reference-card">
+                    <div class="reference-card" role="listitem">
                         <h3 class="reference-title">
-                            <i class="bi bi-calculator"></i> Алгебра
+                            <i class="bi bi-calculator" aria-hidden="true"></i> Алгебра
                         </h3>
                         <div class="reference-content">
                             <h4>Квадратные уравнения</h4>
-                            <p class="formula">ax² + bx + c = 0</p>
-                            <p class="formula">D = b² - 4ac</p>
-                            <p class="formula">x₁,₂ = (-b ± √D) / 2a</p>
+                            <p class="formula"><span class="sr-only">Формула:</span> ax² + bx + c = 0</p>
+                            <p class="formula"><span class="sr-only">Дискриминант:</span> D = b² - 4ac</p>
+                            <p class="formula"><span class="sr-only">Корни уравнения:</span> x₁,₂ = (-b ± √D) / 2a</p>
 
                             <h4>Свойства степеней</h4>
                             <ul>
@@ -149,9 +169,9 @@
                     </div>
 
                     <!-- Геометрия -->
-                    <div class="reference-card">
+                    <div class="reference-card" role="listitem">
                         <h3 class="reference-title">
-                            <i class="bi bi-triangle"></i> Геометрия
+                            <i class="bi bi-triangle" aria-hidden="true"></i> Геометрия
                         </h3>
                         <div class="reference-content">
                             <h4>Площади фигур</h4>
@@ -162,14 +182,14 @@
                             </ul>
 
                             <h4>Теорема Пифагора</h4>
-                            <p class="formula">c² = a² + b²</p>
+                            <p class="formula"><span class="sr-only">Теорема Пифагора:</span> c² = a² + b²</p>
                         </div>
                     </div>
 
                     <!-- Быстрые формулы -->
-                    <div class="reference-card">
+                    <div class="reference-card" role="listitem">
                         <h3 class="reference-title">
-                            <i class="bi bi-lightning"></i> Быстрые формулы
+                            <i class="bi bi-lightning" aria-hidden="true"></i> Быстрые формулы
                         </h3>
                         <div class="reference-content">
                             <h4>Формулы сокращённого умножения</h4>
@@ -178,24 +198,21 @@
                             <p class="formula">a² - b² = (a - b)(a + b)</p>
 
                             <h4>Арифметическая прогрессия</h4>
-                            <p class="formula">aₙ = a₁ + d(n-1)</p>
-                            <p class="formula">Sₙ = (a₁ + aₙ)⋅n/2</p>
+                            <p class="formula"><span class="sr-only">N-ный член:</span> aₙ = a₁ + d(n-1)</p>
+                            <p class="formula"><span class="sr-only">Сумма n членов:</span> Sₙ = (a₁ + aₙ)⋅n/2</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <!-- Подвал -->
-<div id="footer-content"></div>
-    <!-- Подключаем загрузчик шаблонов browser-sync start --server --files * -->
-    <script src="js/template-loader.js"></script>
-    <!-- Остальные скрипты -->
-    <script src="js/index.js"></script>
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer id="footer-content" role="contentinfo"></footer>
+
+    <!-- Скрипты -->
+    <script src="js/template-loader.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
-
-
 </html>
-

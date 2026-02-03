@@ -32,24 +32,97 @@
     --shadow-blue: 0 3px 10px rgba(135, 128, 255, 0.3);
 }
 
-        .cookie-notification {
-            position: fixed;
-            background-color: rgba(0, 0, 0, .8);
-            bottom: 0;
-            width: 100%;
-            color: white;
-            padding: 15px;
-        }
-        .cookie-notification_hidden_yes {
-            display: none;
-        }
-        .cookie-notification__header {
-            margin-bottom: 10px;
-            font-size: 23px;
-        }
-        .cookie-notification__body {
-            margin-bottom: 10px;
-        }
+
+
+/* Добавьте эти стили в конец вашего CSS файла */
+
+/* Исправление для кнопки согласия с cookies */
+.cookie-notification__button {
+    background: var(--gradient-main);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cookie-notification__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Улучшение доступности для скринридеров */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Исправление для модальных окон */
+.hint-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Исправление для проблемы с z-index в problem-card */
+.problem-card {
+    isolation: isolate;
+    z-index: 1;
+}
+
+.answer-section-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Улучшение плавности анимаций */
+* {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Исправление для мобильной навигации */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .nav-button {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -1930,3 +2003,4 @@ body {
     }
 
 }
+

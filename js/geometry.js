@@ -287,6 +287,8 @@ class GeometryProblemsApp {
         if (getCertBtn) {
             getCertBtn.addEventListener('click', () => {
                 this.generateCertificate();
+                
+                ym(106605326,'reachGoal','get_click')
             });
         }
 
@@ -1278,4 +1280,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.geometryApp = new GeometryProblemsApp();
     console.log('Geometry app initialized successfully. Available as window.geometryApp');
 });
+
 

@@ -921,6 +921,7 @@ class AlgebraProblemsApp {
             setTimeout(() => {
                 this.scrollToCertificate();
             }, 1000);
+            ym(106605326,'reachGoal','get_click')
         });
     }
 
@@ -1120,3 +1121,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Algebra app initialized successfully. Available as window.algebraApp');
 
 });
+

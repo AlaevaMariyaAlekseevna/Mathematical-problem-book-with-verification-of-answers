@@ -992,6 +992,7 @@ class GeometryProblemsApp {
         if (!certificateSection) return;
 
         const getCertBtn = document.getElementById('get-certificate');
+         ym(106605326,'reachGoal','get_click')
         if (getCertBtn) {
             getCertBtn.scrollIntoView({
                 behavior: 'smooth',
@@ -1277,3 +1278,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.geometryApp = new GeometryProblemsApp();
     console.log('Geometry app initialized successfully. Available as window.geometryApp');
 });
+

@@ -359,6 +359,7 @@ class AlgebraProblemsApp {
 
         // Кнопка получения сертификата - назначаем один раз
         const getCertBtn = document.getElementById('get-certificate');
+         ym(106605326,'reachGoal','get_click')
         if (getCertBtn) {
             // Удаляем старый обработчик, если он есть
             getCertBtn.removeEventListener('click', this.handleCertificateClick);
@@ -1117,4 +1118,5 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded, initializing algebra app...');
     window.algebraApp = new AlgebraProblemsApp();
     console.log('Algebra app initialized successfully. Available as window.algebraApp');
+
 });

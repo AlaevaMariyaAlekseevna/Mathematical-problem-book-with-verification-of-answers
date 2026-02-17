@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ctaButton.addEventListener('click', function(e) {
             e.preventDefault();
             const featuresSection = document.querySelector('#features');
+            ym(106605326,'reachGoal','get_click')
             if (featuresSection) {
                 featuresSection.scrollIntoView({
                     behavior: 'smooth',
@@ -163,3 +164,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+

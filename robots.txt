@@ -1,0 +1,23 @@
+# robots.txt для сайта https://alaevamariyaalekseevna.github.io/Mathematical-problem-book-with-verification-of-answers /
+User-agent: Yandex
+Disallow: /admin/
+Disallow: /search
+Disallow: /*?s=
+Disallow: /*?p=
+Disallow: /cart/
+Allow: /
+
+User-agent: Googlebot
+Disallow: /admin/
+Disallow: /search
+Disallow: /*?s=
+Disallow: /*?p=
+Disallow: /cart/
+Allow: /
+
+User-agent: *
+Disallow: /admin/
+Disallow: /search
+Disallow: /*?s=
+Disallow: /*?p=
+Disallow: /cart/
